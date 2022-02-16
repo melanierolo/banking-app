@@ -5,11 +5,14 @@ import CreateAccount from "./views/CreateAccount";
 import Deposit from "./views/Deposit";
 import Withdraw from "./views/Withdraw";
 import AllData from "./views/AllData";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />;
           <Route path="/createaccount" element={<CreateAccount />} />;

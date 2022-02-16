@@ -1,16 +1,20 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-/**/
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <div className="Navbar">
-        <div className="leftSide">
-          <h1>LOGO</h1>
+        <li className="leftSide">
+          <NavLink to="/">BankApp.</NavLink>
+        </li>
+        <div id="Links" className="rightSide">
+          <NavLink to="/createaccount">Create Account</NavLink>
+          <NavLink to="/deposit">Deposit</NavLink>
+          <NavLink to="/withdraw">Withdraw</NavLink>
+          <NavLink to="/alldata">Alldata</NavLink>
         </div>
-        <div id="Links" className="rightSide"></div>
       </div>
     </>
   );
