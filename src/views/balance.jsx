@@ -1,5 +1,11 @@
+import "../App.css";
+import Navbar from "../components/Navbar";
 function Balance() {
-  return <h1>Balance</h1>;
+  return (
+    <>
+      <h1>Balance</h1>
+    </>
+  );
 }
 
 export default Balance;

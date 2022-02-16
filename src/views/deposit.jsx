@@ -1,5 +1,11 @@
+import "../App.css";
+import Navbar from "../components/Navbar";
 function Deposit() {
-  return <h1>Deposit</h1>;
+  return (
+    <div>
+      <h1>Deposit</h1>
+    </div>
+  );
 }
 
 export default Deposit;
