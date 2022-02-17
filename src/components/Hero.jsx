@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Hero_img from "../assets/Hero_img.jpeg";
 import Button from "react-bootstrap/Button";
+import { NavLink } from "react-router-dom";
 
 import "./Hero.css";
 
@@ -18,7 +19,9 @@ const Hero = () => {
             for all your banking needs.
           </Card.Text>
           <Button className="hero__button" size="lg">
-            Create Account
+            <NavLink to="/createaccount" className="link__button">
+              Create Account
+            </NavLink>
           </Button>
         </Card.ImgOverlay>
       </Card>

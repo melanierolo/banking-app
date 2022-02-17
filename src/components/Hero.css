@@ -25,10 +25,16 @@
   display: grid;
   background-color: #d5384d;
   border-color: #d5384d;
+  text-decoration: none;
 }
 
 .hero__button:hover {
   margin: 0 auto;
   display: grid;
+  text-decoration: none;
+  background-color: #d5384b;
+}
+
+.link__button {
   text-decoration: none;
 }

@@ -1,9 +1,14 @@
 import "../App.css";
-import Navbar from "../components/Navbar";
+import { useContext } from "react";
+import { UserContext } from "../context/context";
+
 function AllData() {
+  const ctx = useContext(UserContext);
   return (
     <>
-      <h1>All Data</h1>
+      <h5>All Data in Store</h5>
+      {JSON.stringify(ctx)}
+      <br />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import { UserContext } from "./context/context";
 import Home from "./views/Home";
 import CreateAccount from "./views/CreateAccount";
 import Deposit from "./views/Deposit";
@@ -10,17 +11,29 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
-
-        <Routes>
-          <Route path="/" element={<Home />} />;
-          <Route path="/createaccount" element={<CreateAccount />} />;
-          <Route path="/deposit" element={<Deposit />} />;
-          <Route path="/withdraw" element={<Withdraw />} />;
-          <Route path="/alldata" element={<AllData />} />;
-        </Routes>
-      </BrowserRouter>
+        <UserContext.Provider
+          value={{
+            users: [
+              {
+                name: "abel",
+                email: "abel@mit.edu",
+                password: "secret",
+                balance: 100,
+              },
+            ],
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />;
+            <Route path="/createaccount" element={<CreateAccount />} />;
+            <Route path="/deposit" element={<Deposit />} />;
+            <Route path="/withdraw" element={<Withdraw />} />;
+            <Route path="/alldata" element={<AllData />} />;
+          </Routes>
+        </UserContext.Provider>
+      </HashRouter>
     </>
   );
 }
