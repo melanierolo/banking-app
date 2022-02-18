@@ -8,15 +8,20 @@ import { UserContext } from "../context/context";
 function CreateAccount() {
   const [status, setStatus] = useState("");
   const [show, setShow] = useState(true);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const ctx = useContext(UserContext);
+  const emailRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
   function validate(field, label) {
     if (!field) {
       setStatus("Error: " + label);
-      setTimeout(() => setStatus(""), 3000);
+      setTimeout(() => setStatus(""), 5000);
       return false;
     }
     return true;
@@ -42,12 +47,12 @@ function CreateAccount() {
     <>
       <Container className="p-4 container d-flex justify-content center align-items-center">
         <Row className="m-auto">
-          <Card style={{ width: "20rem" }} className="row" status={status}>
+          <Card style={{ width: "30rem" }} className="row" status={status}>
             {show ? (
               <Form>
-                <div className="text-center w-100">
+                <Card.Title className="text-center w-100 p-3">
                   <h1>Create Account</h1>
-                </div>
+                </Card.Title>
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>Name :</Form.Label>
                   <Form.Control
@@ -56,6 +61,11 @@ function CreateAccount() {
                     value={name}
                     onChange={(e) => setName(e.currentTarget.value)}
                   />
+                  {name === "" && (
+                    <Form.Label className="text-danger">
+                      Name required
+                    </Form.Label>
+                  )}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -66,6 +76,11 @@ function CreateAccount() {
                     value={email}
                     onChange={(e) => setEmail(e.currentTarget.value)}
                   />
+                  {emailRegex.test(email) === false && (
+                    <Form.Label className="text-danger">
+                      Email required or invalid
+                    </Form.Label>
+                  )}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -76,9 +91,12 @@ function CreateAccount() {
                     value={password}
                     onChange={(e) => setPassword(e.currentTarget.value)}
                   />
-                  <Form.Text className="text-muted">
-                    We'll never share your password with anyone else.
-                  </Form.Text>
+                  {passwordRegex.test(password) === false && (
+                    <Form.Label className="text-danger">
+                      Minimum eight characters, at least one letter and one
+                      number
+                    </Form.Label>
+                  )}
                 </Form.Group>
                 <Button
                   className="text-center"
@@ -91,14 +109,16 @@ function CreateAccount() {
               </Form>
             ) : (
               <>
-                <h5>Success</h5>
-                <button
-                  type="submit"
-                  className="btn btn-light"
-                  onClick={clearForm}
-                >
-                  Add another account
-                </button>
+                <Container className="text-center w-100 p-3">
+                  <h1>You have signed up successfully</h1>
+                  <button
+                    type="submit"
+                    className="btn btn-light"
+                    onClick={clearForm}
+                  >
+                    Add another account
+                  </button>
+                </Container>
               </>
             )}
           </Card>
