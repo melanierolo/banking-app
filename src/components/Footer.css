@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap");
+
+footer {
+  margin: 0;
+  font-family: "Markazi Text";
+  font-size: 22px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer__logo {
+  grid-area: logo;
+  justify-self: center;
+  text-shadow: 1px 1px 0 #444;
+  font-family: "Markazi Text", bold;
+  font-size: 64px;
+}
+.footer__link0 {
+  grid-area: link0;
+  justify-self: center;
+}
+
+.footer__link1 {
+  grid-area: link1;
+  justify-self: center;
+}
+
+.footer__link2 {
+  grid-area: link2;
+  justify-self: center;
+}
+
+.footer__link3 {
+  grid-area: link3;
+  justify-self: center;
+}
+.footer__link4 {
+  grid-area: link4;
+  justify-self: center;
+}
+
+.footer__copyright {
+  background: #0e152b;
+  grid-column: 1/7;
+  justify-self: center;
+  align-items: center;
+  font-size: 18px;
+  color: whitesmoke;
+  height: auto;
+  padding: 5px;
+  grid-area: copyright;
+}
+
+.container_footer {
+  padding: 0;
+  width: 100%;
+  background: #0e152b;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "logo logo logo logo logo"
+    "link0 link1 link2 link3 link4"
+    "copyright copyright copyright copyright copyright";
+}
+.container_footer a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .container_footer {
+    color: whitesmoke;
+    display: grid;
+    grid-template-areas:
+      "logo"
+      "link0"
+      "link1"
+      "link2"
+      "link3"
+      "link4"
+      "copyright";
+    text-align: center;
+  }
+
+  .container_footer a {
+    text-decoration: none;
+  }
+  .footer__copyright {
+    color: whitesmoke;
+  }
+}
