@@ -1,9 +1,11 @@
 import "../App.css";
+import { Container } from "react-bootstrap";
+
 function Deposit() {
   return (
-    <div>
+    <Container className="min-vh-100">
       <h1>Deposit</h1>
-    </div>
+    </Container>
   );
 }
 

@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <HashRouter>
-        <Navbar />
+        <Navbar className="navbar__spa" />
         <UserContext.Provider
           value={{
             users: [
@@ -33,7 +33,7 @@ function App() {
             <Route path="/alldata" element={<AllData />} />;
           </Routes>
         </UserContext.Provider>
-        <Footer />
+        <Footer className="footer__spa" />
       </HashRouter>
     </>
   );

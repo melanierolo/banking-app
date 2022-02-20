@@ -45,7 +45,7 @@ function CreateAccount() {
 
   return (
     <>
-      <Container className="p-4 container d-flex justify-content center align-items-center">
+      <Container className="p-4 container d-flex justify-content center align-items-center min-vh-100">
         <Row className="m-auto">
           <Card style={{ width: "30rem" }} className="row" status={status}>
             {show ? (
@@ -109,7 +109,7 @@ function CreateAccount() {
               </Form>
             ) : (
               <>
-                <Container className="text-center w-100 p-3">
+                <Container className="text-center w-100 p-3 ">
                   <h1>You have signed up successfully</h1>
                   <button
                     type="submit"
