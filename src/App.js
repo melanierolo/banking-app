@@ -7,7 +7,7 @@ import Deposit from "./views/Deposit";
 import Withdraw from "./views/Withdraw";
 import AllData from "./views/AllData";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -33,6 +33,7 @@ function App() {
             <Route path="/alldata" element={<AllData />} />;
           </Routes>
         </UserContext.Provider>
+        <Footer />
       </HashRouter>
     </>
   );
