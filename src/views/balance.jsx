@@ -1,5 +1,5 @@
 import "../App.css";
-import { Container, Card, Row, Form, Button } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 function Balance({ onChange }) {
   return (
