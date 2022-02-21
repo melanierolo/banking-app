@@ -1,11 +1,18 @@
 import "../App.css";
-import { Container } from "react-bootstrap";
+import { Container, Card, Row, Form, Button } from "react-bootstrap";
 
-function Balance() {
+function Balance({ onChange }) {
   return (
-    <Container className="min-vh-100">
-      <h1>Balance</h1>
-    </Container>
+    <Form.Label className="label huge">
+      <Form.Control
+        type="number"
+        placeholder="Enter deposit"
+        onChange={onChange}
+      />
+      <Button className="text-center" variant="primary" type="submit">
+        Confirm
+      </Button>
+    </Form.Label>
   );
 }
 

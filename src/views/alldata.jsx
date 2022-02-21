@@ -11,22 +11,22 @@ function AllData() {
   console.log(users);
 
   return (
-    <Container className="min-vh-100">
+    <Container className="min-vh-100 p-4">
       <h1>All Data in Store</h1>
 
-      <Table responsive="sm" variant="dark">
+      <Table hover responsive="sm" variant="dark">
         <thead>
           <tr>
             <th>#</th>
-            <th>Email</th>
             <th>Name</th>
+            <th>Email</th>
             <th>Password</th>
           </tr>
         </thead>
         <tbody>
           {users.map((todo, i) => (
             <tr key={i}>
-              <td></td>
+              <td>{i + 1}</td>
               <td>{users[i].name}</td>
               <td>{users[i].email}</td>
               <td>{users[i].password}</td>
