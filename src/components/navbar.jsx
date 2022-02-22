@@ -2,8 +2,12 @@ import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { useContext } from "react";
+import { UserContext } from "../context/context";
 
 const Navbar = () => {
+  const ctx = useContext(UserContext);
+
   return (
     <>
       <div className="Navbar">

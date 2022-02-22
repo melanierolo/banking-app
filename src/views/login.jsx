@@ -75,6 +75,20 @@ function Login() {
     }
   }*/
 
+  const logout = async (e) => {
+    e.preventDefault();
+    dispatch({ type: "logout" });
+    userLogout({ email, ctx });
+
+    function userLogout({ email, ctx }) {
+      for (let i = 0; ctx.users.length > i; i++) {
+        if (email === ctx.users[i].email) {
+          return (ctx.users[i].isLoggedIn = false);
+        }
+      }
+    }
+  };
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -101,7 +115,7 @@ function Login() {
               <Button
                 className="text-center"
                 variant="primary"
-                onClick={() => dispatch({ type: "logout" })}
+                onClick={logout}
               >
                 Log out
               </Button>
