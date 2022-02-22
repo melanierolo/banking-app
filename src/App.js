@@ -22,7 +22,7 @@ function App() {
                 email: "melanie@gmail.com",
                 password: "secret",
                 balance: 100,
-                session: false,
+                isLoggedIn: false,
               },
             ],
           }}

@@ -8,6 +8,7 @@ function AllData() {
   const ctx = useContext(UserContext);
 
   const [users, setUsers] = useState(ctx.users);
+
   console.log(users);
 
   return (

@@ -23,9 +23,9 @@ const Navbar = () => {
           <NavLink to="/alldata" activeClassName="active">
             Alldata
           </NavLink>
-          <Button to="/login" variant="light">
-            Logout
-          </Button>
+          <NavLink to="/login">
+            <Button variant="light">Login</Button>
+          </NavLink>
         </div>
       </div>
     </>
