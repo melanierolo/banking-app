@@ -18,10 +18,11 @@ function App() {
           value={{
             users: [
               {
-                name: "abel",
-                email: "abel@mit.edu",
+                name: "melanie",
+                email: "melanie@gmail.com",
                 password: "secret",
                 balance: 100,
+                session: false,
               },
             ],
           }}
