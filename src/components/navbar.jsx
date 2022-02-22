@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Navbar = () => {
   return (
@@ -10,10 +11,21 @@ const Navbar = () => {
           <NavLink to="/">BankApp.</NavLink>
         </li>
         <div id="Links" className="rightSide">
-          <NavLink to="/createaccount">Create Account</NavLink>
-          <NavLink to="/deposit">Deposit</NavLink>
-          <NavLink to="/withdraw">Withdraw</NavLink>
-          <NavLink to="/alldata">Alldata</NavLink>
+          <NavLink to="/createaccount" activeClassName="active">
+            Create Account
+          </NavLink>
+          <NavLink to="/deposit" activeClassName="active">
+            Deposit
+          </NavLink>
+          <NavLink to="/withdraw" activeClassName="active">
+            Withdraw
+          </NavLink>
+          <NavLink to="/alldata" activeClassName="active">
+            Alldata
+          </NavLink>
+          <Button to="/login" variant="light">
+            Logout
+          </Button>
         </div>
       </div>
     </>

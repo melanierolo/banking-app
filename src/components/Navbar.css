@@ -41,6 +41,11 @@
   color: rgb(129, 129, 129);
 }
 
+.active {
+  text-decoration: none;
+  color: rgb(129, 129, 129);
+}
+
 .Navbar .rightSide {
   flex: 15%;
   display: flex;
@@ -49,7 +54,7 @@
   justify-content: space-between;
   color: black;
   padding: 20px 5% 20px 10px;
-  font-size: 36px;
+  font-size: 30px;
   font-family: "Markazi Text";
 }
 a {

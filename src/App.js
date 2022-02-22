@@ -6,6 +6,7 @@ import CreateAccount from "./views/CreateAccount";
 import Deposit from "./views/Deposit";
 import Withdraw from "./views/Withdraw";
 import AllData from "./views/AllData";
+import Login from "./views/Login";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/deposit" element={<Deposit />} />;
             <Route path="/withdraw" element={<Withdraw />} />;
             <Route path="/alldata" element={<AllData />} />;
+            <Route path="/login" element={<Login />} />;
           </Routes>
         </UserContext.Provider>
         <Footer className="footer__spa" />
