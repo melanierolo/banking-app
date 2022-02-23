@@ -32,32 +32,38 @@ function Withdraw() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTotalState(totalState - transactionState);
     console.log(totalState - transactionState);
 
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if ((isLoggedInWithdraw = true && balanceInitial !== 0)) {
-          let mycopy = [...userLoggedIn];
-          console.log(mycopy);
-          let [{ balance, name, email, password, isLoggedId, id }] = mycopy;
+    if (totalState - transactionState + balanceInitial < 0) {
+      alert("amount is higher than the account balance");
+      return (transactionState = 0);
+    }
+    if (totalState - transactionState + balanceInitial > 0) {
+      setTotalState(totalState - transactionState);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if ((isLoggedInWithdraw = true && balanceInitial !== 0)) {
+            let mycopy = [...userLoggedIn];
+            console.log(mycopy);
+            let [{ balance, name, email, password, isLoggedId, id }] = mycopy;
 
-          resolve(
-            (ctx.users[id - 1] = {
-              name,
-              email,
-              password,
-              isLoggedId: false,
-              id,
-              balance: totalState - transactionState + balanceInitial,
-            }),
-            alert("Withdraw successful")
-          );
-        } else {
-          reject();
-        }
-      }, 3000);
-    });
+            resolve(
+              (ctx.users[id - 1] = {
+                name,
+                email,
+                password,
+                isLoggedId: false,
+                id,
+                balance: totalState - transactionState + balanceInitial,
+              }),
+              alert("Withdraw successful")
+            );
+          } else {
+            reject();
+          }
+        }, 3000);
+      });
+    }
   };
 
   return (
