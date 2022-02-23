@@ -62,18 +62,8 @@ function Login() {
   const [state, dispatch] = useReducer(loginReducer, initialState);
   const { email, password, isLoading, error, isLoggedIn } = state;
 
-  console.log(state);
-
   const ctx = useContext(UserContext);
   console.log(ctx);
-
-  /*if (state.email.search !== "") {
-    for (let i = 0; ctx.users.length > i; i++) {
-      if (ctx.users[i].email === state.email) {
-        return (ctx.users[i].isLoggedIn = false);
-      }
-    }
-  }*/
 
   const logout = async (e) => {
     e.preventDefault();
