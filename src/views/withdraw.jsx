@@ -50,7 +50,8 @@ function Withdraw() {
               isLoggedId: false,
               id,
               balance: totalState - transactionState + balanceInitial,
-            })
+            }),
+            alert("Withdraw successful")
           );
         } else {
           reject();
@@ -66,7 +67,7 @@ function Withdraw() {
           {isLoggedInWithdraw ? (
             <Card.Body>
               <Card.Title>
-                <h1>Deposit</h1>
+                <h1>Withdraw</h1>
               </Card.Title>
               <Card.Text>
                 Please specify withdraw amount

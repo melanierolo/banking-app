@@ -6,7 +6,8 @@ function Balance({ onChange }) {
     <Form.Label className="label huge">
       <Form.Control
         type="number"
-        placeholder="Enter deposit"
+        placeholder="Enter an amount"
+        min="0"
         onChange={onChange}
       />
       <Button className="text-center" variant="primary" type="submit">

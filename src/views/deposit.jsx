@@ -28,6 +28,7 @@ function Deposit() {
 
   const handleChange = (event) => {
     transactionState = Number(event.target.value);
+    console.log(transactionState);
   };
 
   const handleSubmit = (e) => {
@@ -50,7 +51,8 @@ function Deposit() {
               isLoggedId: false,
               id,
               balance: totalState + transactionState + balanceInitial,
-            })
+            }),
+            alert("Deposit successful")
           );
         } else {
           reject();
