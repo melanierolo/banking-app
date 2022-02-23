@@ -47,7 +47,7 @@ function Deposit() {
               name,
               email,
               password,
-              isLoggedId: true,
+              isLoggedId: false,
               id,
               balance: totalState + transactionState + balanceInitial,
             })
