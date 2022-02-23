@@ -110,6 +110,11 @@ function CreateAccount() {
                   variant="primary"
                   type="submit"
                   onClick={handleCreate}
+                  disabled={
+                    name === "" ||
+                    passwordRegex.test(password) === false ||
+                    emailRegex.test(email) === false
+                  }
                 >
                   Sign up
                 </Button>
