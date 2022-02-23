@@ -33,8 +33,44 @@ function Deposit() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTotalState(totalState + transactionState);
-    //ctx.users[id].balance = totalState + transactionState;
+    console.log(totalState + transactionState);
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if ((isLoggedInDeposit = true && balanceInitial !== 0)) {
+          let mycopy = [...userLoggedIn];
+          console.log(mycopy);
+          let [{ balance, name, email, password, isLoggedId, id }] = mycopy;
+
+          resolve(
+            (ctx.users[id - 1] = {
+              name,
+              email,
+              password,
+              isLoggedId: true,
+              id,
+              balance: totalState + transactionState + balanceInitial,
+            })
+          );
+        } else {
+          reject();
+        }
+      }, 3000);
+    });
   };
+
+  //ctx.users[id].balance = totalState + transactionState;
+  /*return new Promise((resolve, reject) => {
+      for (let i = 0; ctx.users.length > i; i++) {
+        setTimeout(() => {
+          if () {
+            resolve((ctx.users[i].Balance = status));
+          } else {
+            reject();
+          }
+        }, 3000);
+      }
+    });*/
 
   //ctx.users[id].balance = totalState + transactionState;
 

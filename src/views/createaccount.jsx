@@ -33,10 +33,10 @@ function CreateAccount() {
     if (!validate(email, "email")) return;
     if (!validate(password, "password")) return;
     ctx.users.push({
+      balance: 100,
       name,
       email,
       password,
-      balance: 100,
       isLoggedIn: false,
       id: ctx.users.length + 1,
     });
