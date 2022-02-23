@@ -8,6 +8,7 @@ function Deposit() {
   const ctx = useContext(UserContext);
   let isLoggedInDeposit = false;
   let transactionState = 0;
+  let balanceInitial = 0;
   let id = 0;
 
   const userLoggedIn = ctx.users.filter((a) => a.isLoggedIn === true);
@@ -15,7 +16,7 @@ function Deposit() {
 
   if (userLoggedIn.length !== Number(0)) {
     isLoggedInDeposit = true;
-    transactionState = userLoggedIn[0].balance;
+    balanceInitial = userLoggedIn[0].balance;
     console.log(transactionState);
     id = userLoggedIn[0].id;
     console.log(id);
@@ -23,15 +24,15 @@ function Deposit() {
 
   const [totalState, setTotalState] = useState(0);
   // state of this transaction
-  let status = totalState + transactionState;
+  let status = totalState + transactionState + balanceInitial;
 
   const handleChange = (event) => {
     transactionState = Number(event.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setTotalState(totalState + transactionState);
-
     //ctx.users[id].balance = totalState + transactionState;
   };
 
