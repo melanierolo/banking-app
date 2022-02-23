@@ -1,13 +1,13 @@
 import "./App.css";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { UserContext } from "./context/context";
-import Home from "./views/Home";
-import CreateAccount from "./views/CreateAccount";
-import Deposit from "./views/Deposit";
-import Withdraw from "./views/Withdraw";
-import AllData from "./views/AllData";
-import Login from "./views/Login";
-import Navbar from "./components/Navbar";
+import Home from "./views/home";
+import CreateAccount from "./views/createaccount";
+import Deposit from "./views/deposit";
+import Withdraw from "./views/withdraw";
+import AllData from "./views/alldata";
+import Login from "./views/login";
+import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 function App() {
   return (
