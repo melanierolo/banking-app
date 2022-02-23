@@ -84,7 +84,7 @@ function Login() {
 
     dispatch({ type: "login" });
 
-    alert("todo");
+    console.log("submit");
 
     try {
       console.log({ email, password, ctx });
