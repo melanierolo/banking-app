@@ -59,21 +59,6 @@ function Deposit() {
     });
   };
 
-  //ctx.users[id].balance = totalState + transactionState;
-  /*return new Promise((resolve, reject) => {
-      for (let i = 0; ctx.users.length > i; i++) {
-        setTimeout(() => {
-          if () {
-            resolve((ctx.users[i].Balance = status));
-          } else {
-            reject();
-          }
-        }, 3000);
-      }
-    });*/
-
-  //ctx.users[id].balance = totalState + transactionState;
-
   return (
     <Container className="min-vh-100 p-4">
       <Row className="m-auto my-4">
