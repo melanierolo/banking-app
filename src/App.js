@@ -23,6 +23,7 @@ function App() {
                 password: "secret",
                 balance: 100,
                 isLoggedIn: false,
+                id: 1,
               },
             ],
           }}

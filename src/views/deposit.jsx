@@ -6,18 +6,36 @@ import { UserContext } from "../context/context";
 
 function Deposit() {
   const ctx = useContext(UserContext);
-  const [isLoggedInDeposit, setIsLoggedInDeposit] = useState(false);
+  let isLoggedInDeposit = false;
+  let transactionState = 0;
+  let id = 0;
+
+  const userLoggedIn = ctx.users.filter((a) => a.isLoggedIn === true);
+  console.log(userLoggedIn);
+
+  if (userLoggedIn.length !== Number(0)) {
+    isLoggedInDeposit = true;
+    transactionState = userLoggedIn[0].balance;
+    console.log(transactionState);
+    id = userLoggedIn[0].id;
+    console.log(id);
+  }
+
   const [totalState, setTotalState] = useState(0);
-  let transactionState = 0; // state of this transaction
-  let status = `Account Balance $ ${totalState}`;
+  // state of this transaction
+  let status = totalState + transactionState;
 
   const handleChange = (event) => {
     transactionState = Number(event.target.value);
   };
   const handleSubmit = (e) => {
-    setTotalState(totalState + transactionState);
     e.preventDefault();
+    setTotalState(totalState + transactionState);
+
+    //ctx.users[id].balance = totalState + transactionState;
   };
+
+  //ctx.users[id].balance = totalState + transactionState;
 
   return (
     <Container className="min-vh-100 p-4">
@@ -38,6 +56,7 @@ function Deposit() {
                   <Form.Group className="mb-3" controlId="formBasicName">
                     <Balance onChange={handleChange} />
                   </Form.Group>
+                  <h2>Account Balance</h2>
                   <h2 id="total">{status}</h2>
                 </Form>
               </Card.Text>

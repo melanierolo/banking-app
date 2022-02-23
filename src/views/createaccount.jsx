@@ -32,7 +32,14 @@ function CreateAccount() {
     if (!validate(name, "name")) return;
     if (!validate(email, "email")) return;
     if (!validate(password, "password")) return;
-    ctx.users.push({ name, email, password, balance: 100, isLoggedIn: false });
+    ctx.users.push({
+      name,
+      email,
+      password,
+      balance: 100,
+      isLoggedIn: false,
+      id: ctx.users.length + 1,
+    });
     setShow(false);
   }
 
