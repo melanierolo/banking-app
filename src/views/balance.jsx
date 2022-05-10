@@ -1,4 +1,5 @@
 import "../App.css";
+import React from "react";
 import { Form, Button } from "react-bootstrap";
 
 function Balance({ onChange }) {

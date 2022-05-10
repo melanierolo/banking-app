@@ -1,7 +1,7 @@
 import "../App.css";
 import { Container, Card, Row, Form } from "react-bootstrap";
 import Balance from "./balance";
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { UserContext } from "../context/context";
 
 function Withdraw() {

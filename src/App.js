@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { UserContext } from "./context/context";
 import Home from "./views/home";
