@@ -14,8 +14,7 @@ function CreateAccount() {
   const [password, setPassword] = useState("");
 
   const ctx = useContext(UserContext);
-  const emailRegex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
   function validate(field, label) {
@@ -54,7 +53,7 @@ function CreateAccount() {
     <>
       <Container className="p-4 container d-flex justify-content center align-items-center min-vh-100">
         <Row className="m-auto">
-          <Card style={{ width: "30rem" }} className="row" status={status}>
+          <Card style={{ width: "30rem" }} className="row py-4" status={status}>
             {show ? (
               <Form>
                 <Card.Title className="text-center w-100 p-3">
@@ -106,8 +105,9 @@ function CreateAccount() {
                   )}
                 </Form.Group>
                 <Button
-                  className="text-center"
+                  className="d-flex justify-content-center mx-auto px-4"
                   variant="primary"
+                  size="lg"
                   type="submit"
                   onClick={handleCreate}
                   disabled={

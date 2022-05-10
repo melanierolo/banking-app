@@ -67,7 +67,7 @@ function Withdraw() {
   };
 
   return (
-    <Container className="min-vh-100 p-4">
+    <Container className="p-4 container d-flex justify-content center align-items-center min-vh-100">
       <Row className="m-auto my-4">
         <Card style={{ width: "30rem" }} className="row">
           {isLoggedInWithdraw ? (

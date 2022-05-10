@@ -62,8 +62,8 @@ function Deposit() {
   };
 
   return (
-    <Container className="min-vh-100 p-4">
-      <Row className="m-auto my-4">
+    <Container className="p-4 container d-flex justify-content center align-items-center min-vh-100">
+      <Row className="m-auto">
         <Card style={{ width: "30rem" }} className="row">
           {isLoggedInDeposit ? (
             <Card.Body>

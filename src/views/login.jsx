@@ -98,7 +98,7 @@ function Login() {
   return (
     <Container className="p-4 container d-flex justify-content center align-items-center min-vh-100">
       <Row className="m-auto">
-        <Card style={{ width: "30rem" }} className="row">
+        <Card style={{ width: "30rem" }} className="row py-4">
           {isLoggedIn ? (
             <>
               <h1>Hello {email}!</h1>
@@ -113,7 +113,7 @@ function Login() {
           ) : (
             <Form onSubmit={onSubmit}>
               <Card.Title className="text-center w-100 p-3">
-                <h1>Log in</h1>
+                <h1>Welcome</h1>
               </Card.Title>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address :</Form.Label>
@@ -150,12 +150,13 @@ function Login() {
                 )}
               </Form.Group>
               <Button
-                className="text-center"
+                className="d-flex justify-content-center mx-auto px-4"
                 variant="primary"
+                size="lg"
                 type="submit"
                 disabled={isLoading}
               >
-                Log in
+                Login
               </Button>
             </Form>
           )}
