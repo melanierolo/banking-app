@@ -4,7 +4,7 @@ Banking-app - Frontend
 
 ## Description/Motivation:
 
-Deploy a React application that include the following functionalities:
+This was a project about a Banking-app(without security) and it was developed for Professional Certificate in Coding - the MITxPRO(Emeritus). Also, it was focus in deploy a React application that include the following functionalities:
 
 <ul>
   <li>	Includes Create Account, Deposit, Withdraw, All Data, and Home pages</li>
