@@ -5,11 +5,16 @@ Banking-app - Frontend
 # Description/Motivation:
 
 Deploy a React application that include the following functionalities:
-o Create an account
-o Deposit money
-o Withdraw money
-o Display data on All Data Page
-o Demonstrates input validation where applicable
+
+<ul>
+  <li>	Includes Create Account, Deposit, Withdraw, All Data, and Home pages</li>
+  <li>Routing: Each navigation bar item routes the user to the relevant page</li>
+  <li> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</li>
+</ul>
+
+## Video about Features
+
+[Front-End banking app](https://youtu.be/vPGUWAYZ4vs)
 
 # Getting Started with Create React App
 
