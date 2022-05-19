@@ -18,7 +18,10 @@ This was a project about a Banking-app(without security) and it was developed fo
 
 ## Technology used:
 
-Your technology stack, listed out.
+<ul>
+  <li>React Hooks for building user interfaces</li>
+  <li>React-bootstrap library was used on the stylesheet</li>
+</ul>
 
 # Getting Started with Create React App
 
