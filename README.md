@@ -2,7 +2,7 @@
 
 Banking-app - Frontend
 
-# Description/Motivation:
+## Description/Motivation:
 
 Deploy a React application that include the following functionalities:
 
@@ -15,6 +15,10 @@ Deploy a React application that include the following functionalities:
 ## Video about Features
 
 [Front-End banking app](https://youtu.be/vPGUWAYZ4vs)
+
+## Technology used:
+
+Your technology stack, listed out.
 
 # Getting Started with Create React App
 
