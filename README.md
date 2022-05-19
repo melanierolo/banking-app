@@ -1,3 +1,16 @@
+# Project Title:
+
+Banking-app - Frontend
+
+# Description/Motivation:
+
+Deploy a React application that include the following functionalities:
+o Create an account
+o Deposit money
+o Withdraw money
+o Display data on All Data Page
+o Demonstrates input validation where applicable
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
