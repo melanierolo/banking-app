@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap');
 
 .hero__img {
   background-image: #0e152b;
   opacity: 0.25;
 }
 .hero__tittle {
-  font-family: "Markazi Text", bold;
+  font-family: 'Markazi Text', bold;
   font-size: 8vw;
   padding: 10% 15% 0% 15%;
   margin: 0 auto;
@@ -15,24 +15,13 @@
 }
 
 .hero__text {
-  font-family: "Markazi Text", bold;
+  font-family: 'Markazi Text', bold;
   font-size: 4vw;
   text-align: center;
 }
 
 .hero__button {
   margin: 0 auto;
-  display: grid;
-  background-color: #d5384d;
-  border-color: #d5384d;
-  text-decoration: none;
-}
-
-.hero__button:hover {
-  margin: 0 auto;
-  display: grid;
-  text-decoration: none;
-  background-color: #d5384b;
 }
 
 .link__button {
