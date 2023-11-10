@@ -1,0 +1,23 @@
+/* customButton.css */
+.btn--custom,
+.btn--custom:focus,
+.btn--custom:active {
+  background-color: #d5384d;
+  border: 1px solid #d5384d;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+}
+
+.btn--custom:hover {
+  background-color: #bb3144;
+  border: 1px solid #bb3144;
+  color: white;
+  border-radius: 15px;
+}
+
+.link__button:hover {
+  color: white;
+  border-radius: 15px;
+}
